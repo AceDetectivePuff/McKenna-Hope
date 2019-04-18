@@ -303,7 +303,7 @@
 	/// @param {integer} $multiplier Multiplier (default is 1).
 	@mixin grid-gutters($gutters, $class: null, $multiplier: 1) {
 
-		// Expand gutters if it's not a list.
+		// Expand gutters if its not a list.
 			@if length($gutters) == 1 {
 				$gutters: ($gutters, 0);
 			}
@@ -541,7 +541,7 @@
 
 	}
 
-	/// Vendorizes a declaration's property and/or value(s).
+	/// Vendorizes a declarations property and/or value(s).
 	/// @param {string} $property Property.
 	/// @param {mixed} $value String/list of value(s).
 	@mixin vendor($property, $value) {
