@@ -1,7 +1,7 @@
 # example netlify.toml
 [build]
   command = "bundle exec jekyll build"
-  functions = "assets/js"
+  # functions = "assets/js"
   publish = "_site"
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
