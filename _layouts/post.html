@@ -10,9 +10,9 @@
 
 <body>
 
-    {% include header.html %} 
-    
-    
+    {% include header.html %}
+
+
 <!-- Main -->
 <div id="main" class="alt">
 
@@ -21,11 +21,15 @@
 	<div class="inner">
 		<header class="major">
 			<h1>{{ page.title }}</h1>
+      <p>{{ page.description }}</p>
 		</header>
 		{% if page.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" /></span>{% endif %}
 		<p>{{ content }}</p>
 	</div>
-</section>
+
+<ul class="actions">
+  <li style="margin:auto;display:block;width: 18em;"><a href="{{ site.baseurl }}/all_graphics.html" class="button next">Back to all graphics</a></li>
+</ul>
 
 </div>
 
