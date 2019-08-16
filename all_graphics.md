@@ -1,7 +1,6 @@
 ---
-layout: allposts
+layout: allgraphics
 title: All Graphics
-landing-title: 'All graphics'
 nav-menu: true
 description: Take a look at the graphics I've made!
 image: null

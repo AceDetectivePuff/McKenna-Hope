@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+    Forty by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  -->
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+
+    <!-- Main -->
+    <div id="main" class="alt">
+
+      <!-- One -->
+      <section id="one">
+	<div class="inner">
+          {% for graphic in site.graphics %}
+	  {% if graphic.title != 404 %}
+	  <header class="major">
+      {% if graphic.show_link %}
+      <a href="{{ graphic.url }}"><h1>{{ graphic.title }}</h1></a>
+      {% else %}
+      <h1>{{ graphic.title }}</h1>
+      {% endif %}
+      {% if graphic.description %}<p>{{ graphic.description }}</p>{% endif %}
+	  </header>
+	  {% if graphic.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ graphic.image }}" alt="" /></span>{% endif %}
+	  {% endif %}
+          {% endfor %}
+	</div>
+      </section>
+
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

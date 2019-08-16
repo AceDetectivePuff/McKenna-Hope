@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+    Forty by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  -->
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+
+    <!-- Main -->
+    <div id="main" class="alt">
+
+      <!-- One -->
+      <section id="one">
+	<div class="inner">
+          {% for website in site.websites %}
+	  {% if website.title != 404 %}
+	  <header class="major">
+      <a href="{{ website.address }}" target="_blank"><h1>{{ website.title }}</h1></a>
+      {% if website.description %}<p>{{ website.description }}</p>{% endif %}
+	  </header>
+	  {% if website.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ website.image }}" alt="" /></span>{% endif %}
+	  {% endif %}
+          {% endfor %}
+	</div>
+      </section>
+
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
